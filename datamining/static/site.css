@@ -14,6 +14,10 @@
 @import url(css/normalize.css);
 /* :: 3.0 Base CSS */
 
+body{
+    background-color: beige;
+}
+
 .navbar {
     background-color: #369831;
 }
@@ -25,7 +29,27 @@
     margin-left: 20vw;
 }
 
+.caption{
+    font-size: .75em;
+    font-weight: lighter;
+}
+
 .container{
     margin-top: 20px;
     width: 60%;
+}
+
+h2.body-titulo{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #212529;
+}
+
+button.btn.btn-light{
+    border: solid 1px #ced4da;
+}
+
+table.table{
+    margin-top: 2em;
 }

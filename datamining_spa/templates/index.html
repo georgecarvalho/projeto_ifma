@@ -5,14 +5,49 @@
 {% include 'partials/menu.html' %}
 
 <section class="container">
-    <h2>Dados do aluno</h2>
-    <ul>
-        <li>Média do aluno</li>
-        <li>Frequência</li>
-        <li>Disciplinas concluídas</li>
+    <h2 class="body-titulo">Índice de Evasão Escolar</h2>
 
-        
-    </ul>
+    <form action="/" method="GET" id="formDadosAluno">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Média</label>
+            <input type="text" class="form-control" id="media" name="media" placeholder="Média do aluno">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Frequência</label>
+            <input type="text" class="form-control" id="percFaltas" name="percFaltas"
+                placeholder="Percentual de presença">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Porcentagem do curso</label>
+            <input type="text" class="form-control" id="percDiscConc" name="percDiscConc"
+                placeholder="Percentual de disciplinas concluídas">
+        </div>
+
+        <span>
+            <button class="btn btn-primary" type="submit" form="formDadosAluno" value="Submit">Enviar</button>
+            <button type="reset" class="btn btn-light">Limpar</button>
+        </span>
+
+        {% if dados %}
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Média</th>
+                    <th scope="col">Frequência</th>
+                    <th scope="col">Percentual do curso </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dado in dados %}
+                <td>{{dado}}</td>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+    </form>
 </section>
 
 
