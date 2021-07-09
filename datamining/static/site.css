@@ -15,7 +15,7 @@
 /* :: 3.0 Base CSS */
 
 body{
-    background-color: beige;
+    background-color: #f3f2ef;
 }
 
 .navbar {
@@ -37,12 +37,14 @@ body{
 .container{
     margin-top: 20px;
     width: 60%;
+    background-color: white;
 }
 
 h2.body-titulo{
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
+    padding-top: 1em;
     color: #212529;
 }
 
